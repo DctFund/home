@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#section-intro" class="page-scroll">Home</a></li>
-                <li><a class="page-scroll" href="#section-dream">dream</a></li>
+                <!--<li><a class="page-scroll" href="#section-dream">dream</a></li>-->
                 <li><a class="page-scroll" href="#section-hope">hope</a></li>
                 <li><a class="page-scroll" href="#section-Allocation">Allocation</a></li>
                 <li><a class="page-scroll" href="#section-about">About</a></li>
@@ -67,7 +67,7 @@
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <div class="carousel slide" id="banner-slider2" data-ride="carousel">
                     <!-- Indicators -->
                     <div class="carousel-inner">
@@ -84,15 +84,25 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="carousel slide" id="banner-slider" data-ride="carousel">
                     <!-- Indicators -->
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="intro-caption2">
                                 <div class="intro-caption2Donate_warp">
-                                    <img class="intro-caption2Donate_img" src="./images/donate.png" alt="">
-                                    <img class="intro-caption2Donate_img" src="./images/donate.png" alt="">
+                                    <div class="intro-caption2Donate_warp_warp">
+                                        <img class="intro-caption2Donate_img" src="./images/DCTF-ETH.png" alt="">
+                                        <span class="intro-caption2Donate_text1">Donate with ETH</span>
+                                        <span class="intro-caption2Donate_text1" id="ethAddress">0x14551DeA29FAe64D84ba5670F7311E71a15e83e2</span>
+                                        <span class="intro-caption2Donate_text2" id="copyEth">Copy Address</span>
+                                    </div>
+                                    <div class="intro-caption2Donate_warp_warp">
+                                        <img class="intro-caption2Donate_img" src="./images/DCTF-BTC.png" alt="">
+                                        <span class="intro-caption2Donate_text1">Donate with BTC</span>
+                                        <span class="intro-caption2Donate_text1" id="btcAddress">1EaiJXUmeEtz7DqXH6q3Bp7Ni2VJqx1yCZ</span>
+                                        <span class="intro-caption2Donate_text2" id="copyBtc">Copy Address</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +148,7 @@
                         for progress, and to build a more beautiful world together.
                     </p>
                     <p>
-                        The Dreams Come True Foundation: Start dreaming.
+                        The Dreams Come True Foundation start with dreaming.
                     </p>
                 </div>
             </div>
@@ -212,7 +222,7 @@
                                         <div class="col-md-6">
                                             <div class="WhatWeDoText_warp" style="margin-top: 30px">
                                                 <p>35% goes towards charitable funds in need</p>
-                                                <p>35% goes to innovative tech teams</p>
+                                                <p>35% goes towards innovative tech teams</p>
                                                 <p>15% goes towards additional fundraising efforts</p>
                                                 <p>15% goes towards operational expenses</p>
                                             </div>
@@ -353,7 +363,6 @@
     </div><!-- container end  -->
 </footer>
 <!-- section contact address end -->
-
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
@@ -369,9 +378,43 @@
 <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
 <!-- Wow Animation -->
 <script type="text/javascript" src="js/wow.min.js"></script>
+<script src="js/clipboard.min.js" type="text/javascript"></script>
+
 <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+
 <!-- Custom Theme JavaScript -->
 <script src="js/theme.js"></script>
+
+<script>
+    var contentEth = $('#ethAddress').html();
+    var contentBtc = $('#btcAddress').html();
+    var clipboardEth = new ClipboardJS('#copyEth', {
+        text: function() {
+            return contentEth;
+        }
+    });
+    clipboardEth.on('success', function(e) {
+        alert("复制成功");
+    });
+
+    clipboardEth.on('error', function(e) {
+        console.log(e);
+    });
+
+    var clipboardBtc = new ClipboardJS('#copyBtc', {
+        text: function() {
+            return contentBtc;
+        }
+    });
+    clipboardBtc.on('success', function(e) {
+        alert("复制成功");
+    });
+
+    clipboardBtc.on('error', function(e) {
+        console.log(e);
+    });
+
+</script>
 
 </body>
 </html>

@@ -973,17 +973,53 @@ h6 {
 }
 
 .intro-caption2 {
-    padding: 160px 0px 170px;
+    padding: 140px 0px 170px;
 }
 
 .intro-caption2Donate_warp {
     margin: 0 auto;
+    text-align: center;
 }
-
-.intro-caption2Donate_img {
-    width: 150px;
+.intro-caption2Donate_warp_warp{
     display: block;
-    margin: 20px auto;
+    margin: 20px 0 0 0 ;
+}
+.intro-caption2Donate_text1{
+    display: block;
+    /*width: 120px;*/
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    /*word-break: break-all;*/
+
+}
+.intro-caption2Donate_text2{
+    display: block;
+    width: 100px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    line-height: 21px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.intro-caption2Donate_text2:hover{
+    background: #fff;
+    color: #2baee6;
+    border-color: #2baee6 ;
+}
+.intro-caption2Donate_text2:active{
+    top:2px;
+}
+.intro-caption2Donate_img {
+    width: 100px;
+    display: block;
+    margin: 20px auto 0;
 }
 
 .WhatWeDoText_warp {
